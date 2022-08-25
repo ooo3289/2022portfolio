@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'hoefler';
+    src:url('./font/ufonts.com_hoefler-text.ttf') format('woff'),
+        url('./font/ufonts.com_hoefler-text.ttf') format('woff2');
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    /* font-weight: 400; */
+} 
+
+@font-face {
+    font-family: 'hoeflerbold';
+    src:url('./font/ufonts.com_hoefler-text-black.ttf') format('woff'),
+        url('./font/ufonts.com_hoefler-text-black.ttf') format('woff2');
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    /* font-weight: 400; */
+} 
+
+@font-face {
+    font-family: 'gsmarket';
+    src:url('./font/GmarketSansTTFLight.ttf') format('woff'),
+        url('./font/GmarketSansTTFLight.ttf') format('woff2');
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    /* font-weight: 400; */
+} 
+
+@font-face {
+    font-family: 'gsmarketMedium';
+    src:url('./font/GmarketSansTTFMedium.ttf') format('woff'),
+        url('./font/GmarketSansTTFMedium.ttf') format('woff2');
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    /* font-weight: 400; */
+} 
+
+@font-face {
+    font-family: 'gsmarketBold';
+    src:url('./font/GmarketSansTTFBold.ttf') format('woff'),
+        url('./font/GmarketSansTTFBold.ttf') format('woff2');
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    /* font-weight: 400; */
+} 
