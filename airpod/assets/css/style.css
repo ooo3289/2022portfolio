@@ -1,0 +1,207 @@
+/* font - SF Pro KR */
+@font-face { font-family: 'SF Pro KR'; font-style: normal; src: url("../fonts/SFProKRDisplay_regular.woff2"); }
+
+@font-face { font-family: 'SF Pro KR'; font-style: normal; font-weight: 500; src: url("../fonts/sf-pro-display_medium.woff2"); }
+
+@font-face { font-family: 'SF Pro KR'; font-style: normal; font-weight: 600; src: url("../fonts/SFProKRDisplay_semibold.woff2"); }
+
+@font-face { font-family: 'SF Pro KR'; font-style: normal; font-weight: 700; src: url("../fonts/SFProKRDisplay_bold.woff2"); }
+
+/* font - SF Pro Text */
+@font-face { font-family: 'SF Pro Text'; font-style: normal; font-weight: 600; src: url("../fonts/sf-pro-text_semibold.woff2"); }
+
+/* font - SF Pro Icons */
+@font-face { font-family: 'SF Pro Icons'; font-style: normal; font-weight: 400; src: url("../fonts/sf-pro-icons_regular.woff2"); }
+
+/* shortcut */
+
+.common_width {position: relative;max-width: 984px;margin: 0 auto;}
+
+.flex_ {display: flex;}
+
+.flex_.wrap {flex-wrap: wrap;}
+
+.flex_.column {flex-direction: column;}
+
+.flex_.alC {align-items: center;}
+
+.flex_.alE{align-items: end;}
+
+.flex_.alS{align-items: start;}
+
+.flex_.sb{justify-content: space-between;}
+
+.flex_.end{justify-content: end;}
+
+.csD {cursor: default;}
+
+.csP {cursor: pointer;}
+
+.bsB {box-sizing: border-box;}
+
+/* header */
+#header {
+    background: #000;
+}
+
+/* gnb */
+h1 a {
+    display: block;
+    width: 30px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 14 44' height='44' viewBox='0 0 14 44' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0h14v44h-14z' fill='none'/%3E%3Cpath d='m13.0729 17.5214c-.093.0723-1.7248.9915-1.7248 3.0364 0 2.3651 2.0759 3.2017 2.1379 3.2223-.0103.0516-.3305 1.1464-1.0948 2.2618-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6835-.9089-2.4787-2.0243c-.9192-1.3117-1.6628-3.3463-1.6628-5.2776 0-3.0984 2.014-4.7406 3.9969-4.7406 1.0535 0 1.9313.692 2.5923.692.63 0 1.6112-.7333 2.8092-.7333.4545.0001 2.0864.0415 3.1605 1.5803zm-3.7284-2.8918c.4957-.5887.8469-1.4046.8469-2.2205 0-.1136-.0103-.2272-.031-.3202-.8056.031-1.7661.5371-2.3445 1.2084-.4544.5164-.8779 1.3323-.8779 2.1586 0 .1239.0207.2479.031.2892.0516.0103.1343.0207.2169.0207.723-.0001 1.6318-.4855 2.1586-1.1362z' fill='%237D7D7D'/%3E%3C/svg%3E");
+    transition: .3s;
+}
+
+h1 a:hover {
+    background-image: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 14 44' height='44' viewBox='0 0 14 44' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0h14v44h-14z' fill='none'/%3E%3Cpath d='m13.0729 17.5214c-.093.0723-1.7248.9915-1.7248 3.0364 0 2.3651 2.0759 3.2017 2.1379 3.2223-.0103.0516-.3305 1.1464-1.0948 2.2618-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6835-.9089-2.4787-2.0243c-.9192-1.3117-1.6628-3.3463-1.6628-5.2776 0-3.0984 2.014-4.7406 3.9969-4.7406 1.0535 0 1.9313.692 2.5923.692.63 0 1.6112-.7333 2.8092-.7333.4545.0001 2.0864.0415 3.1605 1.5803zm-3.7284-2.8918c.4957-.5887.8469-1.4046.8469-2.2205 0-.1136-.0103-.2272-.031-.3202-.8056.031-1.7661.5371-2.3445 1.2084-.4544.5164-.8779 1.3323-.8779 2.1586 0 .1239.0207.2479.031.2892.0516.0103.1343.0207.2169.0207.723-.0001 1.6318-.4855 2.1586-1.1362z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+nav {
+    width: 100%;
+}
+
+.gnb ul {
+    height: 44px;
+}
+
+.gnb_link {
+    display: block;
+    min-width: 52px;
+    height: 44px;
+    font-size: 12px;
+    opacity: .8;
+    transition: .2s;
+}
+
+.gnb_link:hover {
+    opacity: 1;
+}
+
+.gnb_link.store {
+    background: url('../images/gnb_store.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.mac {
+    background: url('../images/gnb_mac.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.ipad {
+    background: url('../images/gnb_ipad.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.iphone {
+    background: url('../images/gnb_iphone.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.watch {
+    background: url('../images/gnb_watch.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.airpods {
+    background: url('../images/gnb_airpods.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.tvhome {
+    background: url('../images/gnb_tvhome.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.onlyonapple {
+    background: url('../images/gnb_onlyonapple.svg') no-repeat center;
+    background-size: contain;
+    width: 83px;
+}
+
+.gnb_link.accessories {
+    background: url('../images/gnb_accessories.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.support {
+    background: url('../images/gnb_support.svg') no-repeat center;
+    background-size: contain;
+}
+
+.gnb_link.search {
+    background: url('../images/search_spr.svg') no-repeat center;
+    background-size: 52px 88px;
+    background-position: 0 0;
+}
+
+.gnb_link.basket {
+    background: url('../images/bag_spr.svg') no-repeat center;
+    background-size: contain;
+}
+
+/* sticky nav */
+.sticky_nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    background: #000;
+    transition: .2s;
+}
+
+.sticky_nav.scrolled {
+    background: rgba(29,29,31,0.72);
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.sticky_nav.scrolled .common_width {
+    border: none;
+}
+
+.sticky_nav .common_width {
+    border-bottom: 1px solid #4a4a4a;
+    height: 52px;
+}
+.sticky_nav h2 {
+    color: #fff;
+    font-size: 20px;
+}
+.sticky_nav ul {}
+.sticky_nav ul li {
+    font-size: 11px;
+    margin-left: 24px;
+}
+.sticky_nav ul li a {
+    color: #7d7d7d;
+    transition: .1s;
+}
+.sticky_nav ul li.hover_blue {
+}
+.sticky_nav ul li.hover_blue a {
+    color: #fff;
+}
+.sticky_nav ul li.hover_blue a:hover {
+    color: #2997ff;
+}
+.sticky_nav ul li.blue_btn {
+}
+.sticky_nav ul li.blue_btn a {
+    padding: 4px 11px;
+    background: #0071e3;
+    border-radius: 20px;
+    color: #fff;
+}
+.sticky_nav ul li.blue_btn a:hover {
+    background: #147ce5;
+}
+
+/* section main */
+section.main {
+    height: 986px;
+    background: #000;
+}
