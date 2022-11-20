@@ -268,9 +268,13 @@ section.sec_intro h3 {
     font-size: 15vw;
     letter-spacing: -0.025em;
 }
-section.sec_intro .link_group {}
+section.sec_intro .link_group {
+    max-width: 300px;
+    width: 100%;
+}
 section.sec_intro .link_group a {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
+    width: 50%;
 }
