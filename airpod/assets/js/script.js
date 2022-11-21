@@ -27,8 +27,8 @@ gsap.fromTo('.intro_text_area', { // 윈도우 시작 애니메이션
   opacity: 1,
   scaleX: 1,
   scaleY: 1,
-  delay: 0.2,
-  duration: 1.1
+  delay: 0.45,
+  duration: 1.5
 });
 gsap.fromTo('.canvas', { // 윈도우 시작 애니메이션
   scaleX: 0.8,
@@ -38,7 +38,7 @@ gsap.fromTo('.canvas', { // 윈도우 시작 애니메이션
   opacity: 1,
   scaleX: 1,
   scaleY: 1,
-  delay: 0.45,
+  delay: 0.2,
   duration: 1.1
 });
 
@@ -51,7 +51,7 @@ gsap.to('.canvas', { // 캔버스 크기 키워주기
     scrub: 1,
   },
   scale: 1.5,
-  duration: 0.8
+  duration: 0.7
 });
 
 gsap.to('.intro_text_area p', { // 텍스트 사라지도록
@@ -63,8 +63,8 @@ gsap.to('.intro_text_area p', { // 텍스트 사라지도록
     scrub: 1,
   },
   opacity: 0,
-  delay: 0.5,
-  duration: 0.8
+  delay: 0.3,
+  duration: 0.7
 });
 
 gsap.to('.intro_text_area .link_group', { // 텍스트 사라지도록
@@ -76,8 +76,8 @@ gsap.to('.intro_text_area .link_group', { // 텍스트 사라지도록
     scrub: 1,
   },
   opacity: 0,
-  delay: 0.5,
-  duration: 0.8
+  delay: 0.3,
+  duration: 0.7
 });
 
 gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
@@ -90,9 +90,26 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
   },
   opacity: 0,
   scale: 1.3,
-  delay: 1,
-  duration: 1.1
+  delay: 0.8,
+  duration: 0.7
 });
+
+gsap.fromTo('.vid_start_text_area p', {}, { // intro 마지막 텍스트 나타났다 사라지도록
+  scrollTrigger: {
+    trigger: '.vid_start_text_area p',
+    start: 'top 30%',
+    end: 'bottom -10%',
+    markers: true,
+    pin: true,
+    scrub: 1,
+    toggleClass: {
+      targets: '.vid_start_text_area',
+      className: 'show'
+    }
+  },
+  delay: 1,
+  duration: 0.7
+})
 
 const wW = document.body.offsetWidth;
 const canvas = document.querySelector('#canvas');
@@ -129,7 +146,7 @@ gsap.to(card, {
     start: 'top top',
     end: 'bottom top',
     pin: true,
-    markers: true
+    // markers: true
   },
   onUpdate: render,
   // duration: 4,
