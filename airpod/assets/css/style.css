@@ -298,20 +298,24 @@ section.sec_vid_bg .vid_start_text_area {
 
 section.sec_vid_bg .vid_start_text_area.show p {
     opacity: 1;
-    font-size: 4.5vw;
+    font-size: 6.5vw;
     white-space: nowrap;
 }
 
 section.sec_vid_bg .vid_start_text_area p {
     position: absolute;
-    top: 80%;
+    top: 0;
+    /* top: 0; */
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     color: #fff;
     font-weight: 700;
-    font-size: 4vw;
+    font-size: 6vw;
     letter-spacing: -0.025em;
     transition: opacity ease-out 900ms, font-size ease-out 900ms;
     height: 100%;
+    width: 100% !important;
+    text-align: center;
+    line-height: 100vh;
 }

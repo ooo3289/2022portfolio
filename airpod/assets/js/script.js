@@ -94,10 +94,10 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
   duration: 0.7
 });
 
-gsap.fromTo('.vid_start_text_area p', {}, { // intro 마지막 텍스트 나타났다 사라지도록
+gsap.fromTo('.vid_start_text_area', {}, { // intro 마지막 텍스트 나타났다 사라지도록
   scrollTrigger: {
     trigger: '.vid_start_text_area p',
-    start: 'top 30%',
+    start: 'top 5%',
     end: 'bottom -10%',
     markers: true,
     pin: true,
