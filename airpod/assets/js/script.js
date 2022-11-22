@@ -97,8 +97,8 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
 gsap.fromTo('.vid_start_text_area', {}, { // intro 마지막 텍스트 나타났다 사라지도록
   scrollTrigger: {
     trigger: '.vid_start_text_area p',
-    start: 'center top',
-    end: '130% top',
+    start: '50% top',
+    end: 'bottom top',
     markers: true,
     pin: true,
     scrub: 1,
@@ -107,7 +107,6 @@ gsap.fromTo('.vid_start_text_area', {}, { // intro 마지막 텍스트 나타났
       className: 'show'
     }
   },
-  delay: 1,
   duration: 0.7
 })
 
