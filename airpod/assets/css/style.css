@@ -303,11 +303,10 @@ section.sec_vid_bg .vid_start_text_area.show p {
 }
 
 section.sec_vid_bg .vid_start_text_area p {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    /* top: 0; */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     opacity: 0;
     color: #fff;
     font-weight: 700;
