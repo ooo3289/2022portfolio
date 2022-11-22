@@ -48,7 +48,7 @@ gsap.to('.canvas', { // 캔버스 크기 키워주기
     start: 'top top',
     end: 'bottom top',
     pin: true,
-    scrub: 1,
+    scrub: 0.5,
   },
   scale: 1.5,
   duration: 0.7
@@ -64,7 +64,7 @@ gsap.to('.intro_text_area p', { // 텍스트 사라지도록
   },
   opacity: 0,
   delay: 0.3,
-  duration: 0.7
+  duration: 0.5
 });
 
 gsap.to('.intro_text_area .link_group', { // 텍스트 사라지도록
@@ -77,7 +77,7 @@ gsap.to('.intro_text_area .link_group', { // 텍스트 사라지도록
   },
   opacity: 0,
   delay: 0.3,
-  duration: 0.7
+  duration: 0.5
 });
 
 gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
@@ -91,14 +91,14 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
   opacity: 0,
   scale: 1.3,
   delay: 0.8,
-  duration: 0.7
+  duration: 0.5
 });
 
 gsap.fromTo('.vid_start_text_area', {}, { // intro 마지막 텍스트 나타났다 사라지도록
   scrollTrigger: {
     trigger: '.vid_start_text_area p',
-    start: 'top top',
-    end: 'bottom -10%',
+    start: 'center top',
+    end: '130% top',
     markers: true,
     pin: true,
     scrub: 1,

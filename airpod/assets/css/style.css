@@ -220,7 +220,7 @@ nav {
 section.sec_intro {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background: #000;
     overflow: hidden;
 }
@@ -254,16 +254,16 @@ section.sec_intro .intro_text_area {
     width: 100%;
     height: 100%;
 }
-section.sec_intro p,
-section.sec_intro h3 {
+section.sec_intro .intro_text_area p,
+section.sec_intro .intro_text_area h3 {
     color: #fff;
 }
-section.sec_intro p {
+section.sec_intro .intro_text_area p {
     font-size: 30px;
     font-weight: 600;
     color: #00ff41;
 }
-section.sec_intro h3 {
+section.sec_intro .intro_text_area h3 {
     color: #fff;
     font-weight: 700;
     font-size: 15vw;
@@ -279,30 +279,22 @@ section.sec_intro .link_group a {
     font-weight: 600;
     width: 50%;
 }
-
-/* section sec_vid_bg */
-section.sec_vid_bg {
-    position: relative;
+section.sec_intro .vid_start_text_area {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    height: 100vh;
-    background: #000;
-    overflow: hidden;
-}
-section.sec_vid_bg .vid_start_text_area {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
-section.sec_vid_bg .vid_start_text_area.show p {
+section.sec_intro .vid_start_text_area.show p {
     opacity: 1;
-    font-size: 6.5vw;
+    font-size: 5.5vw;
     white-space: nowrap;
 }
 
-section.sec_vid_bg .vid_start_text_area p {
+section.sec_intro .vid_start_text_area p {
     /* position: absolute;
     top: 0;
     left: 50%;
@@ -310,11 +302,10 @@ section.sec_vid_bg .vid_start_text_area p {
     opacity: 0;
     color: #fff;
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 5vw;
     letter-spacing: -0.025em;
     transition: opacity ease-out 900ms, font-size ease-out 900ms;
     height: 100%;
     width: 100% !important;
     text-align: center;
-    line-height: 100vh;
 }
