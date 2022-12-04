@@ -17,7 +17,7 @@ $(window).scroll(function () {
   //   $('.sc-video .video-area').removeClass('sticky');
   // }
 })
-  
+
 // sec_intro 
 gsap.fromTo('.intro_text_area', { // 윈도우 시작 애니메이션
   opacity: 0.001,
@@ -47,7 +47,6 @@ gsap.to('.canvas', { // 캔버스 크기 키워주기
     trigger: '#main',
     start: 'top top',
     end: 'bottom top',
-    pin: true,
     scrub: 0.5,
   },
   scale: 1.5,
@@ -58,8 +57,7 @@ gsap.to('.intro_text_area p', { // 텍스트 사라지도록
   scrollTrigger: {
     trigger: '#main',
     start: 'top top',
-    end: 'bottom top',
-    pin: true,
+    end: 'bottom 80%',
     scrub: 1,
   },
   opacity: 0,
@@ -71,8 +69,7 @@ gsap.to('.intro_text_area .link_group', { // 텍스트 사라지도록
   scrollTrigger: {
     trigger: '#main',
     start: 'top top',
-    end: 'bottom top',
-    pin: true,
+    end: 'bottom 80%',
     scrub: 1,
   },
   opacity: 0,
@@ -84,8 +81,7 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
   scrollTrigger: {
     trigger: '#main',
     start: 'top top',
-    end: 'bottom top',
-    pin: true,
+    end: 'bottom 80%',
     scrub: 1,
   },
   opacity: 0,
@@ -93,22 +89,6 @@ gsap.to('.intro_text_area h3', { // 텍스트 사라지도록
   delay: 0.8,
   duration: 0.5
 });
-
-gsap.fromTo('.vid_start_text_area', {}, { // intro 마지막 텍스트 나타났다 사라지도록
-  scrollTrigger: {
-    trigger: '.vid_start_text_area p',
-    start: '50% top',
-    end: 'bottom top',
-    markers: true,
-    pin: true,
-    scrub: 1,
-    toggleClass: {
-      targets: '.vid_start_text_area',
-      className: 'show'
-    }
-  },
-  duration: 0.7
-})
 
 const wW = document.body.offsetWidth;
 const canvas = document.querySelector('#canvas');
@@ -134,26 +114,68 @@ for (let i = 0; i < frameCount; i++) {
   img.src = currentFrame(i);
   images.push(img);
 }
-  
+
 gsap.to(card, {
   frame: frameCount - 1,
   snap: 'frame',
   ease: 'none',
   scrollTrigger: {
+    // markers: true,
     trigger: '#main',
     scrub: 1,
     start: 'top top',
-    end: 'bottom top',
+    end: "bottom center",
     pin: true,
-    // markers: true
   },
   onUpdate: render,
-  // duration: 4,
 });
-  
+
 images[0].onload = render;
 
 function render() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(images[card.frame], 0, 0);
 }
+
+gsap.fromTo('.vid_start_text_area', {}, { // 듣는다는 것을 다시 생각하다. 텍스트 나타났다 사라지도록
+  scrollTrigger: {
+    trigger: '.vid_start_text_area',
+    start: 'top -90%',
+    end: 'bottom -110%',
+    scrub: 1,
+    markers: true,
+    toggleClass: {
+      targets: '.vid_start_text_area',
+      className: 'show'
+    }
+  },
+  duration: 0.7
+})
+
+gsap.fromTo('.hero_vid_area video', { // 춤추는영상
+  // from 
+  opacity: 0,
+}, {
+  // to
+  scrollTrigger: {
+    trigger: '.vid_start_text_area',
+    start: 'top -50%',
+    end: 'bottom -80%',
+    scrub: 1,
+    markers: true,
+  },
+  opacity: 1,
+});
+
+// video play control
+const video = $('.hero_vid_area video').get(0);
+
+$('.sec_vid .video_control').click(function (e) {
+  e.preventDefault();
+  $(this).toggleClass('pause');
+  if ($(this).hasClass('pause')) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});

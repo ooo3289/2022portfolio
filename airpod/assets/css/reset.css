@@ -26,3 +26,5 @@ input, select, button { font: inherit; color: inherit; -webkit-appearance: none;
 i[class^="ico-"], i[class*="ico-"] { display: inline-block; vertical-align: top; }
 
 div[class*="inner"] { position: relative; margin: 0 auto; }
+
+.blind {position: absolute;width: 1px;height: 1px;margin: -1px;overflow: hidden;clip: rect(0 0 0 0);}

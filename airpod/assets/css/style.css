@@ -220,16 +220,13 @@ nav {
 section.sec_intro {
     position: relative;
     width: 100%;
-    height: 200vh;
+    height: calc(100vh - 94px);
     background: #000;
     overflow: hidden;
 }
 section.sec_intro .airpod_intro_area {
-    position: sticky;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 section.sec_intro .intro_canvas_area {
     width: 100%;
@@ -280,32 +277,75 @@ section.sec_intro .link_group a {
     width: 50%;
 }
 section.sec_intro .vid_start_text_area {
-    position: sticky;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 150vh;
-}
-
-section.sec_intro .vid_start_text_area.show p {
-    opacity: 1;
-    font-size: 5.5vw;
-    white-space: nowrap;
-}
-
-section.sec_intro .vid_start_text_area p {
+    height: auto;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     color: #fff;
     font-weight: 700;
     font-size: 5vw;
     letter-spacing: -0.025em;
     transition: opacity ease-out 900ms, font-size ease-out 900ms;
-    height: 100%;
-    width: 100% !important;
     text-align: center;
-    line-height: 150vh;
+    line-height: auto;
+}
+section.sec_intro .vid_start_text_area p {
+    width: 100%;
+}
+
+section.sec_intro .vid_start_text_area.show {
+    opacity: 1;
+    font-size: 5.5vw;
+    white-space: nowrap;
+    width: 100%;
+}
+
+section.sec_vid {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    margin-top: -10%;
+}
+
+section.sec_vid:before {
+    content: '';
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 55%);
+    z-index: 9;
+}
+
+section.sec_vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video_control { 
+    position: absolute; 
+    bottom: 36px; 
+    right: 30px; 
+    z-index: 2; 
+}
+
+.video_control .icon_control { 
+    display: block;
+    width: 24px; 
+    height: 24px; 
+    background: url("../images/icon_play.svg") no-repeat center; 
+}
+
+.video_control.pause .icon_control { 
+    background: url("../images/icon_pause.svg") no-repeat center; 
+}
+.video_control .icon_control:hover {
+    opacity: .7;
 }
